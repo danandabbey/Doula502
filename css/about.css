@@ -1,0 +1,45 @@
+:root{
+    color: #2D712A;
+    background-color: #CAFFFF;
+
+}
+
+h2{
+    text-align: center;
+}
+
+#about-info{
+    padding-bottom: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    padding-bottom: 3em;
+    margin-bottom: 2em;
+}
+
+#email-container{
+    display: flex;
+    justify-content: center;
+}
+
+#email{
+    color: #2D712A;
+}
+
+.nav-button{
+    color: #2D712A;
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+
+    #about-info{
+        font-size: 25px;
+    }
+}

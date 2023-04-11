@@ -1,0 +1,80 @@
+:root{
+    color: #000;
+    background-color: #ffc0cb;
+
+}
+
+h2{
+    text-align: center;
+}
+
+#services-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 3em;
+    padding-bottom: 5em;
+}
+
+#services-btn-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+}
+
+#services-info-con{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service{
+    font-size: 1em;
+    background-color: none;
+    background: none;
+    border: none;
+}
+
+.services:focus{
+    border-bottom: solid #000 1px;
+}
+
+
+#services-desc{
+    align-self: center;
+    width: 50%;
+    display: flex;
+    margin-bottom: 3em;    
+}
+
+#services-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+/*desktop*/
+@media screen and (min-width: 900px) {
+
+    .service{
+        gap: 1px;
+    }
+
+    #services-info{
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 60%;
+        border-left: solid #000 1px;
+        border-right: solid #000 1px;
+    }
+}
+    
