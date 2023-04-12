@@ -7,7 +7,20 @@
     background-position: center center;
     line-height: 1.5;
     min-height: 100vh;
-    position: relative;
+}
+
+footer{
+    position: ;
+}
+
+#bottom-left{
+    display: none;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
 }
 
 main{
@@ -27,9 +40,29 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: 5em;
+    margin-right: 1em;
 }
 
-#title-left{
+#drop-control{
+    
+    display: flex;
+    font-size: 1.2em;
+}
+
+#drop{
+    padding-top: 2em;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#drop:hover{
+    display: flex;
+}
+
+#header-left{
     justify-content: left;
     display: flex;
     margin-left: 1em;
@@ -48,6 +81,7 @@ button:hover{
 
 nav{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
@@ -56,19 +90,12 @@ nav{
 .nav-button{
     display: flex;
     font-size: 1em;
+    text-align: center;
+    align-self: center;
 }
 
 .nav-button:hover{
     color: #808080;
-}
-
-#footer{    
-    justify-content: center;
-    font-size: .7em;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    margin-left: 1em; 
 }
 
 /*desktop*/
@@ -76,16 +103,38 @@ nav{
 
     header{
         display: flex;
+        position: relative;
+        top: 0;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+/*         margin-bottom: 5em;
+ */    }
+
+    #header-left{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
     }
 
-    #title-left{
-        font-size: 1.5em;
+    #drop{
+        padding-top: 0;
+        padding-left: 1em;
+        padding-bottom: 1em;
+        top: 2em;
+        right: .1em;
+        display: none;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 1em;
+        position: absolute;
     }
 
     nav{
         display: flex;
         justify-content: right;
+        flex-direction: column;
         width: auto;
         margin-right: 1em;
     }
@@ -94,43 +143,48 @@ nav{
         display: inline;
         font-size: 1em;
     }
-
-
 }
+
+
+
+
+
+
+
 
 /*tablet*/
 @media screen and (min-width: 750px) {
 
-main {
-    flex-direction: column;
-}
+    main {
+        flex-direction: column;
+    }
 
-#title-left{
-    font-size: 1.5em;
-    justify-content: left;
-    display: flex;
-    margin-left: 1em;
-    margin-right: 1em;
-    flex: 1 2;
-}
+    #header-left{
+        font-size: 1.5em;
+        justify-content: left;
+        display: flex;
+        margin-left: 1em;
+        margin-right: 1em;
+        flex: 1 2;
+    }
 
-header{
-    display: flex;
-    flex-direction: row;
-}
+    header{
+        display: flex;
+        flex-direction: row;
+    }
 
-nav{
-    display: flex;
-    justify-content: right;
-    width: auto;
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        width: auto;
 
-}
+    }
 
-.nav-button {
-    display: inline;
-    font-size: 1.5em;
-    font-size: 1.2em;
-}
-
+    .nav-button {
+        display: inline;
+        font-size: 1.5em;
+        font-size: 1.2em;
+    }
 }
 

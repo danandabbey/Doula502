@@ -26,4 +26,33 @@ function listen(): void{
     });
 };
 
+function dropMenu(): void{
+
+    const btn: any = get("drop-control");
+    const drop: any =get("drop");
+    const both: any = [btn,drop];
+
+    if (window.matchMedia("(min-width: 900px)").matches){
+
+        both.forEach(function (button: any){
+            button.addEventListener("mouseover", function () {
+            drop.style.display = "flex";
+            btn.style.display = "none";
+        })});
+    
+        both.forEach(function (button: any){
+            button.addEventListener("mouseout", function () {
+            drop.style.display = "none";
+            btn.style.display = "flex";
+        })});
+    }
+
+    btn.addEventListener("click", function(){
+        drop.style.display = "flex";
+        btn.style.display = "none";
+    })
+};
+
+dropMenu();
+
 listen();

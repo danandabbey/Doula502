@@ -21,4 +21,29 @@ function listen() {
     });
 }
 ;
+function dropMenu() {
+    var btn = get("drop-control");
+    var drop = get("drop");
+    var both = [btn, drop];
+    if (window.matchMedia("(min-width: 900px)").matches) {
+        both.forEach(function (button) {
+            button.addEventListener("mouseover", function () {
+                drop.style.display = "flex";
+                btn.style.display = "none";
+            });
+        });
+        both.forEach(function (button) {
+            button.addEventListener("mouseout", function () {
+                drop.style.display = "none";
+                btn.style.display = "flex";
+            });
+        });
+    }
+    btn.addEventListener("click", function () {
+        drop.style.display = "flex";
+        btn.style.display = "none";
+    });
+}
+;
+dropMenu();
 listen();
